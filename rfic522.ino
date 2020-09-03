@@ -16,11 +16,11 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);   //新建RC522对象
 Servo myservo;    //创建舵机对象
 bool isAuthed = false;    //验证是否通过
 
-const byte AuthedID[CARDS][4] = { {0x3D,0x3D,0x8F,0x31},
-                                  {0x37,0xCD,0x78,0xA7},
-                                  {0xCD,0x8A,0x8D,0x31},
-                                  {0xB3,0xFF,0xAC,0x46},
-                                  {0x3A,0x0A,0xF1,0x81}};  //可以保存多个卡片UID值
+const byte AuthedID[CARDS][4] = { {0x00,0x00,0x00,0x00},
+                                  {0x00,0x00,0x00,0x00},
+                                  {0x00,0x00,0x00,0x00},
+                                  {0x00,0x00,0x00,0x00},
+                                  {0x00,0x00,0x00,0x00}};  //可以保存多个卡片UID值
 
 void setup() {
   myservo.attach(SERVO_PIN);    //连接舵机
